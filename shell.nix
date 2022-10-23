@@ -33,7 +33,7 @@ pkgs.mkShell {
   ];
   shellHook=''
     export AR="${wasi_sdk}/bin/llvm-ar";
-    export CC="${wasi_sdk}/bin/clang";
+    export CC="${wasi_sdk}/bin/clang --sysroot=${wasi_sdk}/share/wasi-sysroot";
     export CXX="${wasi_sdk}/bin/clang++";
     export LD="${wasi_sdk}/bin/wasm-ld";
     export NM="${wasi_sdk}/bin/llvm-nm";
